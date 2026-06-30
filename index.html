@@ -3,200 +3,178 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме — Артем Лапшин</title>
-    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=XVegxhsUCltot3PsHrcRN2sYUfeF6OQVM5uTfSrdBuSSzb15duDasfum5Uy0Nw52kjwnfVwcHB73DtXZn0_IPTQlTfEdOn8TycijEMzYajavs1iwXRAo_OjwbllpO7o4VjTM7LIVVKm2H_gh1TBmAP_o2bOt5QrNPmL72CmiHFbmDsG6EZy4JqvohEkhiezyZQrgkzb8p1KHa46f2ghprWG08luE4zIcYXazyfXST2yvIP-7HLReA_jQYYvHb5Ulc-YbZ9AIbnU9TTYcgNn-exAs4R5WsVenGRjDE_wn0k5B28Y9ZDBQGqYuLQmQ6n-g" charset="UTF-8"></script><style>
-        @page {
-            size: A4;
-            margin: 18mm 15mm;
-            background-color: #f4f6f8; /* Мягкий светлый slate-grey оттенок */
-        }
-        * {
-            box-sizing: border-box;
-        }
+    <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             color: #2c3e50;
             background-color: #f4f6f8;
-            line-height: 1.4;
-            font-size: 10.5pt;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
         }
         .header {
-            background-color: #1a252f; /* Темно-синий/графитовый баннер */
+            background-color: #1a252f;
             color: #ffffff;
-            margin: -18mm -15mm 20px -15mm;
-            padding: 30px 15mm;
+            padding: 40px;
         }
         .header h1 {
-            margin: 0 0 5px 0;
-            font-size: 22pt;
-            font-weight: bold;
+            margin: 0 0 10px 0;
+            font-size: 28px;
             letter-spacing: 0.5px;
         }
         .header .subtitle {
-            font-size: 13pt;
+            font-size: 18px;
             color: #3498db;
-            margin: 0 0 15px 0;
-            font-weight: normal;
+            margin: 0 0 20px 0;
         }
         .contacts {
-            display: table;
-            width: 100%;
-            margin-top: 10px;
-            font-size: 9.5pt;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 14px;
             border-top: 1px solid #34495e;
-            padding-top: 10px;
+            padding-top: 15px;
         }
-        .contacts-col {
-            display: table-cell;
-            width: 50%;
-            color: #bdc3c7;
-        }
-        .contacts-col.right {
-            text-align: right;
-        }
-        .section-title {
-            font-size: 13pt;
-            color: #1a252f;
-            border-left: 4px solid #3498db;
-            padding-left: 8px;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            font-weight: bold;
-            page-break-after: avoid;
-        }
-        p {
-            margin: 0 0 10px 0;
-            text-align: justify;
-        }
-        ul {
-            margin: 0 0 12px 0;
-            padding-left: 20px;
-        }
-        li {
+        .contacts div {
             margin-bottom: 5px;
         }
+        .content {
+            padding: 40px;
+        }
+        .section-title {
+            font-size: 18px;
+            color: #1a252f;
+            border-left: 4px solid #3498db;
+            padding-left: 12px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+        p {
+            margin: 0 0 15px 0;
+            text-align: justify;
+        }
         .project-block, .edu-block {
-            background: #ffffff;
-            padding: 12px 15px;
-            border-radius: 4px;
-            margin-bottom: 12px;
+            background: #f8fafc;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 15px;
             border: 1px solid #e2e8f0;
-            page-break-inside: avoid;
         }
         .block-header {
-            display: table;
-            width: 100%;
-            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: bold;
         }
         .block-title {
-            display: table-cell;
-            font-weight: bold;
-            font-size: 11pt;
             color: #2c3e50;
         }
         .block-date {
-            display: table-cell;
-            text-align: right;
-            font-size: 9.5pt;
             color: #7f8c8d;
+            font-weight: normal;
         }
         .skills-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 5px;
+            margin-top: 10px;
         }
         .skills-table td {
-            padding: 6px 10px;
+            padding: 10px 12px;
             border: 1px solid #e2e8f0;
-            background: #ffffff;
-            vertical-align: top;
         }
         .skills-table td.category {
             font-weight: bold;
             width: 30%;
-            background: #eaeded;
+            background: #f1f5f9;
             color: #1a252f;
+        }
+        @media (max-width: 600px) {
+            .contacts, .block-header {
+                flex-direction: column;
+            }
+            .block-date {
+                margin-top: 5px;
+            }
+            .skills-table td {
+                display: block;
+                width: 100% !important;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Артем Лапшин</h1>
-        <div class="subtitle">Разработчик Python / Специалист по анализу данных</div>
-        <div class="contacts">
-            <div class="contacts-col">
-                Email: artem.lapshin@example.com<br>
-                GitHub: github.com/artym-l
-            </div>
-            <div class="contacts-col right">
-                Локация: Россия<br>
-                Сайт: artym-l.github.io
+    <div class="container">
+        <div class="header">
+            <h1>Артем Лапшин</h1>
+            <div class="subtitle">Разработчик Python / Специалист по анализу данных</div>
+            <div class="contacts">
+                <div>Email: artem.lapshin@example.com</div>
+                <div>GitHub: github.com/artym-l</div>
+                <div>Локация: Россия</div>
             </div>
         </div>
-    </div>
 
-    <div class="section-title">О себе</div>
-    <p>
-        Студент технического направления со специализацией в области высшей математики, физики и компьютерных наук. Увлечен разработкой программного обеспечения на Python, проектированием архитектуры приложений и решением сложных аналитических задач. Обладаю опытом создания кастомных алгоритмических решений, работы с графическими интерфейсами и структурами данных.
-    </p>
+        <div class="content">
+            <div class="section-title">О себе</div>
+            <p>
+                Студент технического направления со специализацией в области высшей математики, физики и компьютерных наук. Увлечен разработкой программного обеспечения на Python, проектированием архитектуры приложений и решением сложных аналитических задач. Обладаю опытом создания кастомных алгоритмических решений, работы с графическими интерфейсами и структурами данных.
+            </p>
 
-    <div class="section-title">Ключевые навыки</div>
-    <table class="skills-table">
-        <tr>
-            <td class="category">Языки и фреймворки</td>
-            <td>Python (ООП), PyQt5 (разработка GUI), алгоритмы машинного обучения, базовый C++</td>
-        </tr>
-        <tr>
-            <td class="category">Структуры данных</td>
-            <td>Бинарные деревья решений, хэш-таблицы, оптимизация и анализ сложности алгоритмов</td>
-        </tr>
-        <tr>
-            <td class="category">Инструменты и среды</td>
-            <td>Git, GitHub, Linux CLI, сетевые утилиты и прокси-клиенты (продвинутая настройка маршрутизации)</td>
-        </tr>
-        <tr>
-            <td class="category">Аналитическая подготовка</td>
-            <td>Высшая математика, математический анализ, теоретическая физика, численное моделирование процессов</td>
-        </tr>
-    </table>
+            <div class="section-title">Ключевые навыки</div>
+            <table class="skills-table">
+                <tr>
+                    <td class="category">Языки и технологии</td>
+                    <td>Python (ООП)</td>
+                </tr>
+                <tr>
+                    <td class="category">Структуры данных</td>
+                    <td>Бинарные деревья решений, хэш-таблицы, оптимизация и анализ сложности алгоритмов</td>
+                </tr>
+                <tr>
+                    <td class="category">Инструменты</td>
+                    <td>Git, GitHub</td>
+                </tr>
+                <tr>
+                    <td class="category">Математика и Физика</td>
+                    <td>Математический анализ, численные методы, обработка экспериментальных данных, расчет погрешностей</td>
+                </tr>
+            </table>
 
-    <div class="section-title">Проекты</div>
-    
-    <div class="project-block">
-        <div class="block-header">
-            <div class="block-title">Разработка интерактивного калькулятора на PyQt5</div>
-            <div class="block-date">2026</div>
+            <div class="section-title">Проекты</div>
+            
+            <div class="project-block">
+                <div class="block-header">
+                    <div class="block-title">Аппроксимация методом наименьших квадратов (МНК)</div>
+                    <div class="block-date">2026</div>
+                </div>
+                <p>Разработка математического модуля на Python для аппроксимации экспериментальных данных методом наименьших квадратов. Скрипт осуществляет расчет коэффициентов линейных и полиномиальных зависимостей, вычисляет среднеквадратичное отклонение и погрешности, а также визуализирует результаты аппроксимации и исходные точки.</p>
+            </div>
+
+            <div class="section-title">Образование</div>
+            <div class="edu-block">
+                <div class="block-header">
+                    <div class="block-title">Технический университет (Бакалавриат)</div>
+                    <div class="block-date">2025 — Наст. время</div>
+                </div>
+                <p>Профильные дисциплины: высшая математика, общая и теоретическая физика, информатика и программирование.</p>
+            </div>
         </div>
-        <p>Проектирование и реализация десктопного приложения с графическим интерфейсом на базе библиотеки PyQt5. Реализована чистая архитектура с разделением логики вычислений и UI-компонентов, обработка исключений и кастомные стили оформления.</p>
-    </div>
-
-    <div class="project-block">
-        <div class="block-header">
-            <div class="block-title">Реализация бинарных деревьев и хэш-таблиц</div>
-            <div class="block-date">2026</div>
-        </div>
-        <p>Разработка библиотеки структур данных «с нуля» на Python для академических и практических задач. Включает построение сбалансированных деревьев решений и оптимизацию коллизий в хэш-таблицах с целью минимизации времени поиска.</p>
-    </div>
-
-    <div class="project-block">
-        <div class="block-header">
-            <div class="block-title">Моделирование физических процессов (Лабораторные практикумы)</div>
-            <div class="block-date">2026</div>
-        </div>
-        <p>Проведение комплексных расчетов, численный анализ и автоматизация обработки данных для лабораторных работ по механике, термодинамике и электричеству с использованием Python. Написание скриптов для построения точных графиков и расчета погрешностей.</p>
-    </div>
-
-    <div class="section-title">Образование</div>
-    <div class="edu-block">
-        <div class="block-header">
-            <div class="block-title">Технический университет (Бакалавриат)</div>
-            <div class="block-date">2024 — Наст. время</div>
-        </div>
-        <p>Специализация: Физика, высшая математика и информатика. Активное участие в исследовательских проектах кафедры, глубокое изучение системного программирования и методов анализа данных.</p>
     </div>
 
 </body>
