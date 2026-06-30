@@ -45,8 +45,17 @@
             border-top: 1px solid #34495e;
             padding-top: 15px;
         }
-        .contacts div {
-            margin-bottom: 5px;
+        .contacts a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .contacts a:hover {
+            text-decoration: underline;
+        }
+        .contacts .left-side, .contacts .right-side {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
         .content {
             padding: 40px;
@@ -107,6 +116,9 @@
             .contacts, .block-header {
                 flex-direction: column;
             }
+            .contacts .right-side {
+                margin-top: 5px;
+            }
             .block-date {
                 margin-top: 5px;
             }
@@ -124,9 +136,14 @@
             <h1>Артем Лапшин</h1>
             <div class="subtitle">Разработчик Python / Специалист по анализу данных</div>
             <div class="contacts">
-                <div>Email: artem.lapshin@example.com</div>
-                <div>GitHub: github.com/artym-l</div>
-                <div>Локация: Россия</div>
+                <div class="left-side">
+                    <div>Email: <a href="mailto:lapshin.artemcka@gmail.com">artem.lapshin@example.com</a></div>
+                    <div>GitHub: <a href="https://github.com/ArtymLapshin" target="_blank">github.com/artym-l</a></div>
+                </div>
+                <div class="right-side">
+                    <div>Telegram: <a href="https://t.me/@artymlapshin" target="_blank">@your_username</a></div>
+                    <div>VK: <a href="https://discord.ru" target="_blank">vk.com/your_id</a></div>
+                </div>
             </div>
         </div>
 
@@ -144,7 +161,7 @@
                 </tr>
                 <tr>
                     <td class="category">Структуры данных</td>
-                    <td>Бинарные деревья решений, хэш-таблицы, оптимизация и анализ сложности алгоритмов</td>
+                    <td>Бинарные деревья решений, хэш-таблицы,优化 и анализ сложности алгоритмов</td>
                 </tr>
                 <tr>
                     <td class="category">Инструменты</td>
